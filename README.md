@@ -1,4 +1,5 @@
-# Picoleto
+# Picoleto 
+[![Build Status](https://travis-ci.org/Fewlaps/Picoleto.svg?branch=master)](https://travis-ci.org/Fewlaps/Picoleto)
 
 Picoleto is the gentleman that will validate your Spanish identity documents.
 

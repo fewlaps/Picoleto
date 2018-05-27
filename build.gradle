@@ -2,6 +2,7 @@ group 'Picoleto'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'com.novoda.bintray-release'
 
 sourceCompatibility = 1.8
 
@@ -11,4 +12,22 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.8.1'
+    }
+}
+
+publish {
+    userOrg = 'fewlaps'
+    groupId = 'com.fewlaps.picoleto'
+    artifactId = 'picoleto'
+    publishVersion = '1.0.0'
+    desc = ''
+    website = 'https://github.com/Fewlaps/Picoleto'
 }

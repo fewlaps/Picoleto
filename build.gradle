@@ -3,6 +3,8 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'cobertura'
+apply plugin: 'com.github.kt3k.coveralls'
 
 sourceCompatibility = 1.8
 
@@ -20,6 +22,8 @@ buildscript {
     }
     dependencies {
         classpath 'com.novoda:bintray-release:0.8.1'
+        classpath 'net.saliman:gradle-cobertura-plugin:2.3.1'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
     }
 }
 
@@ -31,3 +35,5 @@ publish {
     desc = ''
     website = 'https://github.com/Fewlaps/Picoleto'
 }
+
+cobertura.coverageFormats = ['html', 'xml'] // coveralls plugin depends on xml format report

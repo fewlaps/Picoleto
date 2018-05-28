@@ -40,5 +40,5 @@ Grab via gradle:
 ```groovy
 repositories { jcenter() }
     
-compile 'com.fewlaps.picoleto:picoleto:1.0.0'
+implementation 'com.fewlaps.picoleto:picoleto:1.0.0'
 ```

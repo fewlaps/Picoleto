@@ -28,10 +28,10 @@ public class Picoleto {
 
         if (NIFValidator.withDocument(document).isValid()) {
             return TYPE_NIF;
-        } else if (NIEValidator.withDocument(document).isValid()) {
-            return TYPE_NIE;
         } else if (PassportValidator.withDocument(document).isValid()) {
             return TYPE_PASSPORT;
+        } else if (NIEValidator.withDocument(document).isValid()) {
+            return TYPE_NIE;
         } else {
             return INVALID_DOCUMENT;
         }
@@ -44,10 +44,10 @@ public class Picoleto {
 
         if (Character.isDigit(document.charAt(0))) {
             return NIFValidator.withDocument(document).isValid();
-        } else if (document.toUpperCase().startsWith("X") || document.toUpperCase().startsWith("Y") || document.toUpperCase().startsWith("Z")) {
-            return NIEValidator.withDocument(document).isValid();
         } else if (document.length() > 3 && Character.isAlphabetic(document.charAt(0)) && Character.isAlphabetic(document.charAt(1)) && Character.isAlphabetic(document.charAt(2))) {
             return PassportValidator.withDocument(document).isValid();
+        } else if (document.toUpperCase().startsWith("X") || document.toUpperCase().startsWith("Y") || document.toUpperCase().startsWith("Z")) {
+            return NIEValidator.withDocument(document).isValid();
         } else {
             return false;
         }

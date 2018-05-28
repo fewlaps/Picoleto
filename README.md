@@ -35,10 +35,23 @@ if (documentType == Picoleto.TYPE_NIF) {
 
 ## Download
 
-Grab via gradle:
+- Grab via gradle:
 
 ```groovy
 repositories { jcenter() }
     
 implementation 'com.fewlaps.picoleto:picoleto:1.0.0'
 ```
+
+- Grab via Maven:
+
+```
+<dependency>
+  <groupId>com.fewlaps.picoleto</groupId>
+  <artifactId>picoleto</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+```
+
+Or check [bintray](https://bintray.com/fewlaps/maven/picoleto/) to get the latest jar file

@@ -3,7 +3,7 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'com.novoda.bintray-release'
-apply plugin: 'cobertura'
+apply plugin: 'net.saliman.cobertura'
 apply plugin: 'com.github.kt3k.coveralls'
 
 sourceCompatibility = 1.8
@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testRuntime 'org.slf4j:slf4j-api:1.7.10'
 }
 
 buildscript {
@@ -22,7 +23,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.novoda:bintray-release:0.8.1'
-        classpath 'net.saliman:gradle-cobertura-plugin:2.3.1'
+        classpath 'net.saliman:gradle-cobertura-plugin:2.5.4'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
     }
 }

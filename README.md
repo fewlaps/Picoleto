@@ -3,6 +3,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/Fewlaps/Picoleto/badge.svg)](https://coveralls.io/github/Fewlaps/Picoleto)
 [ ![Download](https://api.bintray.com/packages/fewlaps/maven/picoleto/images/download.svg) ](https://bintray.com/fewlaps/maven/picoleto/_latestVersion)
 
+<img src="icon.png" width="20%"/>
+
 Picoleto is the gentleman that will validate your Spanish identity documents.
 
 Give him a document number, and he will tell you which kind of document it is and if it is a valid or a fake one!

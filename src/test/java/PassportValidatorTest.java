@@ -56,7 +56,7 @@ public class PassportValidatorTest {
     }
 
     @Test
-    public void shouldReturnTrue_forAnEmptyPassport() {
+    public void shouldReturnFalse_forAnEmptyPassport() {
         String validPassport = "";
 
         assertFalse(PassportValidator.withDocument(validPassport).isValid());

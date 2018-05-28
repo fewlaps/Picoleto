@@ -79,7 +79,7 @@ public class PicoletoTest {
 
         assertTrue(documentType == Picoleto.TYPE_NIE);
     }
-    
+
     @Test
     public void shouldReturnInvalidDocument_forNullDocument() {
         String document = null;

@@ -2,12 +2,14 @@ package com.fewlaps.picoleto;
 
 import com.fewlaps.picoleto.validators.NIEValidator;
 import com.fewlaps.picoleto.validators.NIFValidator;
+import com.fewlaps.picoleto.validators.PassportValidator;
 
 public class Picoleto {
 
     public static final int INVALID_DOCUMENT = -1;
     public static final int TYPE_NIF = 1;
     public static final int TYPE_NIE = 2;
+    public static final int TYPE_PASSPORT = 3;
 
     private String document;
 
@@ -28,6 +30,8 @@ public class Picoleto {
             return TYPE_NIF;
         } else if (NIEValidator.withDocument(document).isValid()) {
             return TYPE_NIE;
+        } else if (PassportValidator.withDocument(document).isValid()) {
+            return TYPE_PASSPORT;
         } else {
             return INVALID_DOCUMENT;
         }
@@ -42,6 +46,8 @@ public class Picoleto {
             return NIFValidator.withDocument(document).isValid();
         } else if (document.toUpperCase().startsWith("X") || document.toUpperCase().startsWith("Y") || document.toUpperCase().startsWith("Z")) {
             return NIEValidator.withDocument(document).isValid();
+        } else if (document.length() > 3 && Character.isAlphabetic(document.charAt(0)) && Character.isAlphabetic(document.charAt(1)) && Character.isAlphabetic(document.charAt(2))) {
+            return PassportValidator.withDocument(document).isValid();
         } else {
             return false;
         }

@@ -44,6 +44,34 @@ public class PicoletoTest {
     }
 
     @Test
+    public void shouldReturnFalse_forNullNIE() {
+        String nullNIE = null;
+
+        assertFalse(Picoleto.withDocument(nullNIE).isValid());
+    }
+
+    @Test
+    public void shouldReturnFalse_forEmptyNIE() {
+        String emptyNIE = "";
+
+        assertFalse(Picoleto.withDocument(emptyNIE).isValid());
+    }
+
+    @Test
+    public void shouldReturnFalse_forNullNIF() {
+        String nullNIF = null;
+
+        assertFalse(Picoleto.withDocument(nullNIF).isValid());
+    }
+
+    @Test
+    public void shouldReturnFalse_forEmptyNIF() {
+        String emptyNIF = "";
+
+        assertFalse(Picoleto.withDocument(emptyNIF).isValid());
+    }
+
+    @Test
     public void shouldReturnTypeNIE_forANIEDocument() {
         String validNIE = "Y6928050G";
 
@@ -51,7 +79,7 @@ public class PicoletoTest {
 
         assertTrue(documentType == Picoleto.TYPE_NIE);
     }
-
+    
     @Test
     public void shouldReturnInvalidDocument_forNullDocument() {
         String document = null;

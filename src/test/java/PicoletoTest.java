@@ -106,4 +106,75 @@ public class PicoletoTest {
 
         assertTrue(documentType == Picoleto.INVALID_DOCUMENT);
     }
+
+    @Test
+    public void shouldReturnTypePassport_forAPassportDocument() {
+        String validPassport = "PMD339649B";
+
+        int documentType = Picoleto.withDocument(validPassport).getDocumentType();
+
+        assertTrue(documentType == Picoleto.TYPE_PASSPORT);
+    }
+
+    @Test
+    public void shouldReturnTypePassport_forAPassportDocument_startsWithX() {
+        String validPassport = "XMD339649B";
+
+        int documentType = Picoleto.withDocument(validPassport).getDocumentType();
+
+        assertTrue(documentType == Picoleto.TYPE_PASSPORT);
+    }
+
+    @Test
+    public void shouldReturnTypePassport_forAPassportDocument_startsWithY() {
+        String validPassport = "YMD339649B";
+
+        int documentType = Picoleto.withDocument(validPassport).getDocumentType();
+
+        assertTrue(documentType == Picoleto.TYPE_PASSPORT);
+    }
+
+    @Test
+    public void shouldReturnTypePassport_forAPassportDocument_startsWithZ() {
+        String validPassport = "ZMD339649B";
+
+        int documentType = Picoleto.withDocument(validPassport).getDocumentType();
+
+        assertTrue(documentType == Picoleto.TYPE_PASSPORT);
+    }
+
+    @Test
+    public void shouldReturnTrue_forAValidPassport() {
+        String validPassport = "PMD339649B";
+
+        assertTrue(Picoleto.withDocument(validPassport).isValid());
+    }
+
+    @Test
+    public void shouldReturnTrue_forAValidPassport_startsWithX() {
+        String validPassport = "XMD339649B";
+
+        assertTrue(Picoleto.withDocument(validPassport).isValid());
+    }
+
+    @Test
+    public void shouldReturnTrue_forAValidPassport_startsWithY() {
+        String validPassport = "YMD339649B";
+
+        assertTrue(Picoleto.withDocument(validPassport).isValid());
+    }
+
+    @Test
+    public void shouldReturnTrue_forAValidPassport_startsWithZ() {
+        String validPassport = "ZMD339649B";
+
+        assertTrue(Picoleto.withDocument(validPassport).isValid());
+    }
+
+    @Test
+    public void shouldReturnFalse_forANotValidPassport() {
+        String wrongPassport = "PM339649B";
+
+        assertFalse(Picoleto.withDocument(wrongPassport).isValid());
+    }
 }

@@ -1,4 +1,4 @@
-import com.fewlaps.picoleto.validators.NIFValidator;
+import  com.fewlaps.picoleto.validators.NIFValidator;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;

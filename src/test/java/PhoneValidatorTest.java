@@ -54,4 +54,18 @@ public class PhoneValidatorTest {
 
         assertTrue(PhoneValidator.withPhone(validLaneLaneNumber).isLaneLine());
     }
+
+    @Test
+    public void shouldReturnFalse_forNullPhoneNumber() {
+        String nullPhoneNumber = null;
+
+        assertFalse(PhoneValidator.withPhone(nullPhoneNumber).isValid());
+    }
+
+    @Test
+    public void shouldReturnFalse_foEmptyPhoneNumber() {
+        String emptyPhoneNumber = "";
+
+        assertFalse(PhoneValidator.withPhone(emptyPhoneNumber).isValid());
+    }
 }

@@ -214,4 +214,61 @@ public class PicoletoTest {
 
         assertTrue(Picoleto.withPhone(notValidPhoneNumber).getType() == Picoleto.INVALID_PHONE_NUMBER);
     }
+
+    @Test
+    public void shouldReturnTrue_forAValidZipCode() {
+        String validZipCode = "08240";
+
+        assertTrue(Picoleto.withZipCode(validZipCode).isValid());
+    }
+
+    @Test
+    public void shouldReturnFalse_forInvalidZipCode() {
+        String invalidZipCode = "53700";
+
+        assertFalse(Picoleto.withZipCode(invalidZipCode).isValid());
+    }
+
+    @Test
+    public void shouldReturnFalse_forNullZipCode() {
+        String nullZipCode = null;
+
+        assertFalse(Picoleto.withZipCode(nullZipCode).isValid());
+    }
+
+    @Test
+    public void shouldReturnFalse_forEmptyZipCode() {
+        String emptyZipCode = "";
+
+        assertFalse(Picoleto.withZipCode(emptyZipCode).isValid());
+    }
+
+    @Test
+    public void shouldReturnTypeZipCode_forAValidZipCode() {
+        String validZipCode = "17750";
+
+        assertTrue(Picoleto.withZipCode(validZipCode).getType() == Picoleto.TYPE_ZIP_CODE);
+    }
+
+    @Test
+    public void shouldReturnInvalid_forInvalidZipCode() {
+        String invalidZipCode = "177001";
+
+        assertTrue(Picoleto.withZipCode(invalidZipCode).getType() == Picoleto.INVALID_ZIP_CODE);
+    }
+
+    @Test
+    public void shouldReturnInvalidInput_forNullZipCode() {
+        String nullZipCode = null;
+
+        assertTrue(Picoleto.withZipCode(nullZipCode).getType() == Picoleto.INVALID_INPUT);
+    }
+
+    @Test
+    public void shouldReturnInvalidInput_forEmptyZipCode() {
+        String emptyZipCode = "";
+
+        assertTrue(Picoleto.withZipCode(emptyZipCode).getType() == Picoleto.INVALID_INPUT);
+    }
+
 }

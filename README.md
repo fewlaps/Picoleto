@@ -23,7 +23,7 @@ String phone = "616333383";
 boolean phoneValid = Picoleto.withPhone(phone).isValid();
 
 String zipCode = "17750";
-boolean zipCodeValid= Picoleto.withZipCode(zipCode).isValid();
+boolean zipCodeValid = Picoleto.withZipCode(zipCode).isValid();
 ```
 
 Want to know the document type?

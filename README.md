@@ -38,7 +38,7 @@ if (documentType == Picoleto.TYPE_NIF) {
     //TODO Your NIE stuff
 } else if (documentType == Picoleto.TYPE_PASSPORT) {
     //TODO Your PASSPORT stuff
-}else if (documentType == Picoleto.INVALID_DOCUMENT) {
+} else if (documentType == Picoleto.INVALID_DOCUMENT) {
     //TODO don't try to fool the picoleto!!
 }
 ```

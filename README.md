@@ -5,13 +5,28 @@
 
 <img src="icon.png" width="20%"/>
 
-Picoleto is the gentleman that will validate your Spanish identity documents(NIF,NIE,Passport),Spanish Phones(MobileLine and LandLine) and Spanish ZipCodes.
+Picoleto is the gentleman that will validate your Spanish documents:
+
+-Identity
+
+    -NIF
+    -NIE
+    -Passport
+
+-Phones
+
+    -MobileLine
+    -LandLine
+
+-ZipCodes
+
+
+
+## How does it works?
 
 Give him a document number, and he will tell you which kind of document it is and if it is a valid or a fake one!
 
-You can know the type of phone you're calling.
-
-## How does it works?
+Now You can do the same with phones and zipcodes!
 
 Validate a Document,Phone or ZipCode:
 

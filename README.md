@@ -7,20 +7,20 @@
 
 Picoleto is the gentleman that will validate your Spanish documents:
 
--Identity
+* Identity 
+              
+   * NIF
 
-    -NIF
-    -NIE
-    -Passport
+   * NIE 
 
--Phones
+   * Passport
 
-    -MobileLine
-    -LandLine
+* Phones
 
--ZipCodes
+   * MobileLine
+   * LandLine
 
-
+* ZipCodes
 
 ## How does it works?
 
